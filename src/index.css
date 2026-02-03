@@ -149,17 +149,45 @@
     50% { background-position: 100% center; }
   }
 
-  /* Pulse animation for CTAs */
-  .pulse-glow {
-    animation: pulse-glow 2s ease-in-out infinite;
+  /* Snake border animation for CTAs */
+  .snake-border {
+    position: relative;
+    overflow: hidden;
   }
 
-  @keyframes pulse-glow {
-    0%, 100% {
-      box-shadow: 0 0 20px hsl(75 100% 50% / 0.4);
+  .snake-border::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: conic-gradient(
+      from var(--snake-angle, 0deg),
+      hsl(75 100% 50%) 0deg,
+      hsl(75 100% 50%) 60deg,
+      transparent 60deg,
+      transparent 360deg
+    );
+    border-radius: inherit;
+    animation: snake-rotate 2s linear infinite;
+    z-index: -1;
+  }
+
+  .snake-border::after {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: hsl(75 100% 50%);
+    border-radius: calc(var(--radius) - 2px);
+    z-index: -1;
+  }
+
+  @keyframes snake-rotate {
+    0% {
+      --snake-angle: 0deg;
+      transform: rotate(0deg);
     }
-    50% {
-      box-shadow: 0 0 40px hsl(75 100% 50% / 0.6);
+    100% {
+      --snake-angle: 360deg;
+      transform: rotate(360deg);
     }
   }
 
