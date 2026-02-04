@@ -98,7 +98,7 @@ const Cases = () => {
               transition={{ delay: index * 0.1 }}
               className="glass-card rounded-2xl p-6 text-center"
             >
-              <item.icon className="w-8 h-8 text-accent mx-auto mb-3" />
+              <item.icon className="w-8 h-8 text-primary mx-auto mb-3" />
               <div className="text-2xl lg:text-3xl font-bold text-foreground mb-1">
                 {item.value}
               </div>
@@ -140,9 +140,7 @@ const Cases = () => {
                     <div className="text-xs text-muted-foreground mb-1">
                       {stat.label}
                     </div>
-                    <div className={`text-2xl font-bold ${
-                      caseItem.color === "accent" ? "text-accent" : "text-primary"
-                    }`}>
+                    <div className="text-2xl font-bold text-primary">
                       {stat.value}
                     </div>
                     <div className="text-xs text-muted-foreground mt-1">
