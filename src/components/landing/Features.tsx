@@ -114,16 +114,12 @@ const Features = () => {
               variants={item}
               className={`glass-card rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 ${
                 feature.highlight 
-                  ? "lg:col-span-2 border-accent/30 hover:border-accent/50" 
-                  : "hover:border-primary/50"
+                  ? "lg:col-span-2" 
+                  : ""
               }`}
             >
-              <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl mb-4 ${
-                feature.highlight ? "bg-accent/20" : "bg-primary/20"
-              }`}>
-                <feature.icon className={`w-6 h-6 ${
-                  feature.highlight ? "text-accent" : "text-primary"
-                }`} />
+              <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl mb-4 bg-primary/10">
+                <feature.icon className="w-6 h-6 text-primary" />
               </div>
               <h3 className="text-xl font-bold mb-3 text-foreground">
                 {feature.title}

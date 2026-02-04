@@ -15,9 +15,9 @@ const Hero = () => {
       <div className="absolute inset-0 bg-hero-mesh" />
       <div className="absolute inset-0 dot-pattern opacity-40" />
       
-      {/* Animated glow */}
+      {/* Subtle animated glow for light theme */}
       <motion.div
-        className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl"
+        className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl"
         animate={{
           scale: [1, 1.2, 1],
           opacity: [0.3, 0.5, 0.3],
@@ -29,7 +29,7 @@ const Hero = () => {
         }}
       />
       <motion.div
-        className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-accent/10 rounded-full blur-3xl"
+        className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-primary/3 rounded-full blur-3xl"
         animate={{
           scale: [1.2, 1, 1.2],
           opacity: [0.2, 0.4, 0.2],
@@ -48,10 +48,10 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/10 mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/20 bg-primary/5 mb-8"
           >
-            <Zap className="w-4 h-4 text-accent" />
-            <span className="text-sm font-medium text-foreground/80">
+            <Zap className="w-4 h-4 text-primary" />
+            <span className="text-sm font-medium text-foreground">
               Лидогенерация нового поколения
             </span>
           </motion.div>
@@ -109,12 +109,12 @@ const Hero = () => {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.7 + index * 0.1 }}
-                className="glass-card rounded-2xl p-6 text-center hover:border-primary/50 transition-colors duration-300"
+                className="glass-card rounded-2xl p-6 text-center"
               >
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/20 mb-4">
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 mb-4">
                   <stat.icon className="w-6 h-6 text-primary" />
                 </div>
-                <div className="text-3xl lg:text-4xl font-bold text-accent mb-2">
+                <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">
                   {stat.value}
                 </div>
                 <div className="text-sm text-muted-foreground">{stat.label}</div>

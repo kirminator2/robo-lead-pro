@@ -55,8 +55,8 @@ const Contact = () => {
     <section id="contact" className="py-24 lg:py-32 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-accent/10 rounded-full blur-3xl" />
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section header */}
@@ -183,7 +183,7 @@ const Contact = () => {
               <ul className="space-y-4">
                 {benefits.map((benefit) => (
                   <li key={benefit} className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0" />
+                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
                     <span className="text-foreground/90">{benefit}</span>
                   </li>
                 ))}

@@ -49,9 +49,9 @@ const Process = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/10 mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/20 bg-primary/5 mb-6">
             <Workflow className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-foreground/80">
+            <span className="text-sm font-medium text-foreground">
               Простой процесс
             </span>
           </div>
@@ -114,7 +114,7 @@ const Process = () => {
           className="mt-16 text-center"
         >
           <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full glass-card">
-            <ArrowRight className="w-5 h-5 text-accent" />
+            <ArrowRight className="w-5 h-5 text-primary" />
             <span className="text-foreground font-medium">
               Первые лиды уже на следующий день после запуска
             </span>

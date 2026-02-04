@@ -117,7 +117,7 @@ export default {
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'hero-mesh': 'radial-gradient(at 40% 20%, hsl(210 100% 50% / 0.15) 0px, transparent 50%), radial-gradient(at 80% 0%, hsl(75 100% 50% / 0.1) 0px, transparent 50%), radial-gradient(at 0% 50%, hsl(210 100% 40% / 0.1) 0px, transparent 50%)',
+        'hero-mesh': 'radial-gradient(at 40% 20%, hsl(220 90% 50% / 0.06) 0px, transparent 50%), radial-gradient(at 80% 0%, hsl(200 90% 55% / 0.04) 0px, transparent 50%), radial-gradient(at 0% 50%, hsl(220 80% 45% / 0.04) 0px, transparent 50%)',
       },
     },
   },

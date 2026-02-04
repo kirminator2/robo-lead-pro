@@ -90,14 +90,14 @@ const Pricing = () => {
               transition={{ delay: index * 0.1, duration: 0.5 }}
               className={`relative rounded-3xl p-8 transition-all duration-300 ${
                 plan.highlighted
-                  ? "glass-card border-2 border-accent/50 lg:scale-105 lg:-my-4"
-                  : "glass-card hover:border-primary/50"
+                  ? "glass-card border-2 border-primary/30 lg:scale-105 lg:-my-4"
+                  : "glass-card"
               }`}
             >
               {/* Badge */}
               {plan.badge && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <span className="px-4 py-1.5 rounded-full bg-accent text-accent-foreground text-sm font-bold">
+                  <span className="px-4 py-1.5 rounded-full bg-primary text-primary-foreground text-sm font-bold">
                     {plan.badge}
                   </span>
                 </div>
@@ -105,11 +105,9 @@ const Pricing = () => {
 
               {/* Icon */}
               <div className={`inline-flex items-center justify-center w-14 h-14 rounded-2xl mb-6 ${
-                plan.highlighted ? "bg-accent/20" : "bg-primary/20"
+                plan.highlighted ? "bg-primary/15" : "bg-primary/10"
               }`}>
-                <plan.icon className={`w-7 h-7 ${
-                  plan.highlighted ? "text-accent" : "text-primary"
-                }`} />
+                <plan.icon className="w-7 h-7 text-primary" />
               </div>
 
               {/* Plan name */}
@@ -125,7 +123,7 @@ const Pricing = () => {
               {/* Price */}
               <div className="mb-8">
                 <span className={`text-4xl lg:text-5xl font-bold ${
-                  plan.highlighted ? "text-accent" : "text-foreground"
+                  plan.highlighted ? "text-primary" : "text-foreground"
                 }`}>
                   {plan.price}
                 </span>
@@ -136,10 +134,8 @@ const Pricing = () => {
               <ul className="space-y-4 mb-8">
                 {plan.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-3">
-                    <Check className={`w-5 h-5 mt-0.5 flex-shrink-0 ${
-                      plan.highlighted ? "text-accent" : "text-primary"
-                    }`} />
-                    <span className="text-foreground/90">{feature}</span>
+                    <Check className="w-5 h-5 mt-0.5 flex-shrink-0 text-primary" />
+                    <span className="text-foreground/80">{feature}</span>
                   </li>
                 ))}
               </ul>
